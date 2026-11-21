@@ -4,6 +4,7 @@ Split-Beat HE(C86) 사용자 가이드 정적 사이트입니다. Studio(`studio
 
 - `site/` — 배포되는 파일 전체 (`index.html`, `style.css`, `guide.js`, `theme.js`, `img/`, `_headers`)
 - `tools/check_site.mjs` — 링크·앵커·이미지 alt/크기 검사 (`node tools/check_site.mjs site`)
+- `tools/render_keyboard.py` — 시작하기의 키보드·포트 그림(인라인 SVG)을 실제 CAD(상·하판 DXF, 노브·롤러 STEP)와 C86 PCB의 USB-C 위치(J401 PC, J501·J551 좌우 연결)로 다시 그립니다. 로컬 작업 공간의 `shipping-foam/geometry.py`와 CAD venv가 필요합니다: `.tools/cad-venv/Scripts/python.exe -X utf8 split-beat-he-docs/tools/render_keyboard.py`
 
 ## 미리보기
 

@@ -316,3 +316,82 @@ footer {
   main { padding-top: 28px; }
   h2 { font-size: 23px; }
 }
+
+/* Keyboard top-view diagram (tools/render_keyboard.py) */
+.kb-figure { margin-top: 12px; }
+.kb-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.kb-body { fill: var(--kb-body); stroke: var(--line); stroke-width: 0.6; }
+.kb-plate { fill: var(--kb-plate); stroke: var(--kb-edge); stroke-width: 0.5; }
+.kb-key { stroke-width: 0.5; }
+.kb-hall { fill: var(--kb-hall); stroke: var(--accent); }
+.kb-mx { fill: var(--kb-mx); stroke: var(--kb-edge); }
+.kb-label, .kb-note, .kb-side, .kb-front, .kb-pc-text, .kb-badge-text {
+  font-family: inherit;
+  text-anchor: middle;
+}
+.kb-label { fill: var(--text); font-size: 5.2px; font-weight: 650; }
+.kb-note { fill: var(--muted); font-size: 4.4px; font-weight: 600; }
+.kb-side { fill: var(--muted); font-size: 6.5px; font-weight: 700; letter-spacing: 0.1em; }
+.kb-front { fill: var(--muted); font-size: 5px; }
+.kb-bezel { fill: var(--kb-plate); stroke: var(--kb-edge); stroke-width: 0.6; }
+.kb-knob { fill: var(--kb-mx); stroke: var(--kb-edge); stroke-width: 0.6; }
+.kb-wheel { fill: var(--kb-mx); stroke: var(--kb-edge); stroke-width: 0.5; }
+.kb-port { fill: var(--kb-port); }
+.kb-cable { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.kb-cable-pc { stroke: var(--kb-port); }
+.kb-cable-link { stroke: var(--kb-link); }
+.kb-pc { fill: var(--panel); stroke: var(--kb-port); stroke-width: 1; }
+.kb-pc-text { fill: var(--text); font-size: 7px; font-weight: 800; }
+.kb-badge { fill: var(--kb-port); }
+.kb-badge-text { fill: var(--panel); font-size: 6.5px; font-weight: 800; }
+.port-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--kb-port);
+  color: var(--panel);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  vertical-align: 1px;
+}
+:root {
+  --kb-body: #e9ecef;
+  --kb-plate: #f6f7f8;
+  --kb-edge: #9aa3ae;
+  --kb-hall: #e4f2d4;
+  --kb-mx: #dde1e6;
+  --kb-port: #c2410c;
+  --kb-link: #2f8fa0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --kb-body: #232831;
+    --kb-plate: #1b2027;
+    --kb-edge: #4a525e;
+    --kb-hall: #26331f;
+    --kb-mx: #2c323c;
+    --kb-port: #f59e5b;
+    --kb-link: #72d4df;
+  }
+}
+:root[data-theme="dark"] {
+  --kb-body: #232831;
+  --kb-plate: #1b2027;
+  --kb-edge: #4a525e;
+  --kb-hall: #26331f;
+  --kb-mx: #2c323c;
+  --kb-port: #f59e5b;
+  --kb-link: #72d4df;
+}
