@@ -19,3 +19,7 @@ python -m http.server 8890 --bind 127.0.0.1 --directory site
 ## 화면 이미지
 
 `site/img/`의 Studio 화면은 Studio의 테스트용 HID 시뮬레이터로 캡처했습니다(실제 장치 아님). Studio UI가 바뀌면 다시 캡처하세요.
+
+## 라이선스
+
+글, 그림, 코드 모두 [MIT](LICENSE)입니다. © 2026 codeki lab.
