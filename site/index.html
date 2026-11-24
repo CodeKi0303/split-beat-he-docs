@@ -235,10 +235,25 @@
 
       <section id="profiles">
         <h2>프로필</h2>
-        <p>보정·매핑·RT·이동거리를 하나의 JSON 파일로 보관하고 불러옵니다.</p>
+        <p>펌웨어 0.4.0 이상에서는 키보드 안에 프로필을 4개까지 둘 수 있습니다. 게임마다 다른 작동점이나 키 배치를 쓰고 싶을 때 프로필을 바꾸면 됩니다.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>프로필마다 따로</th><th>모든 프로필 공통</th></tr></thead>
+          <tbody>
+            <tr><td>작동점, 눌림/복귀 RT, 상·하단 데드존, RT 켜기/끄기, 미해제 재입력</td><td>보정값, 노이즈 데드밴드, 거리 곡선</td></tr>
+            <tr><td>키 매핑 전체</td><td></td></tr>
+          </tbody>
+        </table></div>
         <ul>
-          <li><span class="btn-ref">프로필 내보내기</span>: 현재 설정을 파일로 저장합니다. 펌웨어 업데이트 전이나 큰 변경 전에 백업해 두세요.</li>
-          <li><span class="btn-ref">프로필 가져오기</span>: 파일의 설정을 키보드에 적용합니다. 적용 후 <span class="btn-ref">키보드에 저장</span>을 누르세요.</li>
+          <li><strong>전환:</strong> 사이드바 키보드 카드 아래의 <span class="btn-ref">1</span>~<span class="btn-ref">4</span> 버튼을 누릅니다. 사용 중인 프로필이 강조됩니다.</li>
+          <li><strong>새로 만들기:</strong> 빈 칸의 <span class="btn-ref">+</span>를 누르면 현재 프로필을 복사해 만들고 바로 그 프로필로 바뀝니다.</li>
+          <li><strong>이름·삭제:</strong> <strong>프로필</strong> 탭에서 이름(한글 5자, 영문 16자까지)을 바꾸거나 쓰지 않는 프로필을 삭제합니다. 사용 중인 프로필은 삭제할 수 없습니다.</li>
+        </ul>
+        <div class="note"><p>프로필을 만들거나 바꾼 내용은 <span class="btn-ref">키보드에 저장</span>을 눌러야 다음 연결에도 남습니다. 보정은 공통이라 프로필마다 다시 할 필요가 없습니다.</p></div>
+        <h3>파일로 보관</h3>
+        <p>현재 프로필의 보정·매핑·RT·이동거리를 JSON 파일로 보관하고 불러옵니다.</p>
+        <ul>
+          <li><span class="btn-ref">파일로 내보내기</span>: 현재 설정을 파일로 저장합니다. 펌웨어 업데이트 전이나 큰 변경 전에 백업해 두세요.</li>
+          <li><span class="btn-ref">파일 가져오기</span>: 파일의 설정을 지금 사용 중인 프로필에 적용합니다. 적용 후 <span class="btn-ref">키보드에 저장</span>을 누르세요.</li>
         </ul>
       </section>
 
@@ -250,7 +265,7 @@
           <figcaption>펌웨어 탭</figcaption>
         </figure>
         <ol class="steps">
-          <li>설정을 먼저 <span class="btn-ref">키보드에 저장</span>합니다. 필요하면 프로필도 내보내 두세요.</li>
+          <li>설정을 먼저 <span class="btn-ref">키보드에 저장</span>합니다. 필요하면 <span class="btn-ref">파일로 내보내기</span>로 백업해 두세요.</li>
           <li><span class="btn-ref">정식 릴리스 불러오기</span>를 누릅니다.</li>
           <li><span class="btn-ref">양쪽 버전 확인</span>을 누릅니다. 이때 Studio 연결을 펌웨어 탭이 잠시 넘겨받습니다.</li>
           <li>확인 항목에 체크하고 <span class="btn-ref">좌우 업데이트</span>를 누릅니다. 이미 같은 버전인 쪽은 건너뜁니다.</li>
